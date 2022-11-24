@@ -4,6 +4,7 @@ import { MdMoreHoriz } from 'react-icons/md';
 import { useGlobalState } from '../store';
 
 const AsidePage = () => {
+<<<<<<< HEAD
   const [trending] = useGlobalState("trending");
   return (
     <div className="w-2/4 px-10 space-y-4">
@@ -44,6 +45,9 @@ const Trends = ({trending}) =>{
       
     </div>
   );
+=======
+  return <div className="w-2/4">AsidePage</div>;
+>>>>>>> 6ce24998d671d056b9386aa7ebd295e988e61b6d
 }
 
 export default AsidePage
