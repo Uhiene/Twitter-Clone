@@ -1,7 +1,10 @@
 
+<<<<<<< HEAD
 # Twitter Clone
 
 Follow the steps below to download, install, and run this project.
+=======
+>>>>>>> 8eab6e3 (added a mainpage,created a store folder)
 
 ## Dependencies
 Install these prerequisites to follow along with the tutorial. See free video tutorial or a full explanation of each prerequisite.

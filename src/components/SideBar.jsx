@@ -1,9 +1,10 @@
 import React from "react";
 import { FaHashtag, FaTwitter } from "react-icons/fa";
 import { BiHomeCircle } from "react-icons/bi";
-import { BsPeopleFill, BsBell, BsPersonFill, BsBookmarkFill } from "react-icons/bs";
+import { BsPeople, BsBell, BsPerson, BsBookmark } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { CiCircleMore } from "react-icons/ci";
+import avatar from "../assets/princess.jpg";
 
 const SideBar = () => {
   return (
@@ -27,7 +28,7 @@ const Bar = () => {
         <p>Explore</p>
       </div>
       <div className="flex space-x-3">
-        <BsPeopleFill className=" text-3xl" />
+        <BsPeople className=" text-3xl" />
         <p>Communities</p>
       </div>
       <div className="flex space-x-3">
@@ -39,11 +40,11 @@ const Bar = () => {
         <p>Messages</p>
       </div>
       <div className="flex space-x-3">
-        <BsBookmarkFill className=" text-3xl" />
+        <BsBookmark className=" text-3xl" />
         <p>Bookmarks</p>
       </div>
       <div className="flex space-x-3">
-        <BsPersonFill className=" text-3xl" />
+        <BsPerson className=" text-3xl" />
         <p>Profile</p>
       </div>
       <div className="flex space-x-3">
@@ -58,7 +59,7 @@ const Bar = () => {
 const Button = () => {
   return (
     <div>
-      <button className="px-8 p-2 bg-blue-500 text-white rounded-3xl">
+      <button className="w-60 p-4 bg-blue-500 text-white rounded-full">
         Tweet
       </button>
     </div>
@@ -67,7 +68,7 @@ const Button = () => {
 const Profile = () => {
   return (
     <div className="px-20 flex space-x-2">
-      <img src="https://uhiene.github.io/images/ojo.jpeg" alt="" className="w-12 rounded-3xl" />
+      <img src={avatar} alt="" className="w-12 rounded-full" />
       <div>
         <h2 className="font-bold text-md">Code_Queen</h2>
         <p className="text-slate-400">@Chenemi_U</p>
