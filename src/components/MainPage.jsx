@@ -1,19 +1,10 @@
 import React from 'react'
 import avatar from "../assets/princess.jpg";
 import { BsEmojiSmile, BsStar } from "react-icons/bs";
-<<<<<<< HEAD
-import { BiMessageRounded } from "react-icons/bi";
-import { AiOutlineFileGif, AiOutlineHeart, AiOutlinePicture, AiOutlineRetweet } from "react-icons/ai";
-import { CiBoxList } from "react-icons/ci";
-import { TbCalendarTime } from "react-icons/tb";
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { MdMoreHoriz, MdSaveAlt } from "react-icons/md";
-=======
 import { AiOutlineFileGif, AiOutlinePicture } from "react-icons/ai";
 import { CiBoxList } from "react-icons/ci";
 import { TbCalendarTime } from "react-icons/tb";
 import { HiOutlineLocationMarker } from "react-icons/hi";
->>>>>>> 6ce24998d671d056b9386aa7ebd295e988e61b6d
 import { useGlobalState } from "../store";
 
 const MainPage = () => {
@@ -44,11 +35,7 @@ const Post = () => {
       </div>
       <div className='w-full'>
         <p className="text-xl text-slate-400 mt-5 font-base">Whats Happeneing?</p>
-<<<<<<< HEAD
-        <div className="flex justify-between w-full pt-5 pb-5">
-=======
         <div className="pt-5 flex justify-between w-full pt-5 pb-5">
->>>>>>> 6ce24998d671d056b9386aa7ebd295e988e61b6d
           <div className="flex w-1/2 justify-between">
             <AiOutlinePicture className='text-2xl text-blue-500' />
             <AiOutlineFileGif className='text-2xl text-blue-500' />
@@ -75,44 +62,15 @@ const Tweets = ({ user }) => {
             <img src={p.image} alt="" className="w-14 rounded-full" />
           </div>
           <div className="text-slate-700">
-<<<<<<< HEAD
-            <div className="flex justify-between">
-              <div className="flex">
-                <h1 className="font-bold">{p.userName}</h1>
-                <p className="text-slate-500 "> {p.userAccount} {p.time}</p>
-              </div>
-              <MdMoreHoriz className="text-2xl" />
-=======
             <div className="flex">
               <h1 className="font-bold">Saran Pariyar</h1>
               <p className="text-slate-500 "> @Saran Pariyar.4h</p>
->>>>>>> 6ce24998d671d056b9386aa7ebd295e988e61b6d
             </div>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
               voluptatibus.
             </p>
-<<<<<<< HEAD
-            <div className="flex justify-between">
-              <div className="flex space-x-3 w-1/4 items-center">
-                <BiMessageRounded className="text-xl " />
-                <p>{p.comments}</p>
-              </div>
-              <div className="flex space-x-3 w-1/4 items-center">
-                <AiOutlineRetweet className="text-xl" />
-                <p>{p.retweets}</p>
-              </div>
-              <div className="flex space-x-3 w-1/4 items-center">
-                <AiOutlineHeart className="text-xl" />
-                <p>{p.likes}</p>
-              </div>
-              <div className="flex space-x-3 w-1/4 items-center">
-                <MdSaveAlt className="text-xl" />
-              </div>
-            </div>
-=======
             <div></div>
->>>>>>> 6ce24998d671d056b9386aa7ebd295e988e61b6d
           </div>
         </div>
       ))}
