@@ -7,7 +7,8 @@ const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
   user: [
     {
       id: 1,
-      image: avatar1,
+      image:
+        "https://pbs.twimg.com/profile_images/1584936060353929216/gbHFqT11_400x400.jpg",
       userName: "Saran Pariyar",
       userAccount: "@Saran Pariyar",
       post: "",
@@ -18,9 +19,10 @@ const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
     },
     {
       id: 2,
-      image: avatar1,
-      userName: "Binary Blackbelt",
-      userAccount: "@Binary Blackbelt",
+      image:
+        "https://pbs.twimg.com/profile_images/1529866054746398724/6_yk41Lt_400x400.jpg",
+      userName: "Darlington Gospel",
+      userAccount: " @IDaltonic",
       post: "",
       time: ".4h",
       likes: 3,
@@ -29,9 +31,9 @@ const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
     },
     {
       id: 3,
-      image: avatar2,
-      userName: "ismaty.tez",
-      userAccount: "@ismaty.tez",
+      image: "https://twitter.com/PNgumoha/photo",
+      userName: "Prince Eldn",
+      userAccount: "@PNuomoha",
       post: "",
       time: ".2h",
       likes: 4,
@@ -40,9 +42,9 @@ const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
     },
     {
       id: 4,
-      image: avatar3,
-      userName: "Jary Cruz",
-      userAccount: "@Jary Cruz",
+      image: "https://twitter.com/dev_giftea/photo",
+      userName: "Giftea",
+      userAccount: "@Dev_Giftea",
       post: "",
       time: ".10s",
       likes: 4,
@@ -83,7 +85,7 @@ const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
     {
       id: 4,
       trendHeader: "Trending",
-      trend: "Burna",
+      trend: "#Burna",
       tweets: "29.7k",
     },
   ],

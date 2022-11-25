@@ -1,16 +1,23 @@
-import React from 'react'
-import avatar from "../assets/princess.jpg";
+import React from "react";
+import avatar from "../assets/899.jpg";
 import { BsEmojiSmile, BsStar } from "react-icons/bs";
-import { AiOutlineFileGif, AiOutlinePicture } from "react-icons/ai";
+import {
+  AiOutlineFileGif,
+  AiOutlineHeart,
+  AiOutlinePicture,
+  AiOutlineRetweet,
+} from "react-icons/ai";
+import { BiMessageRounded } from "react-icons/bi";
 import { CiBoxList } from "react-icons/ci";
 import { TbCalendarTime } from "react-icons/tb";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import { MdSaveAlt } from "react-icons/md";
 import { useGlobalState } from "../store";
 
 const MainPage = () => {
   const [user] = useGlobalState("user");
   return (
-    <div className="border-r border-slate-200 w-2/4">
+    <div className="border-r border-slate-200 w-3/5">
       <Header />
       <Post />
       <Tweets user={user} />
@@ -20,12 +27,12 @@ const MainPage = () => {
 
 const Header = () => {
   return (
-    <div className="flex justify-between font-bold text-xl px-4">
+    <div className="flex justify-between font-bold text-gray-800 text-xl px-4">
       <p>Home</p>
       <BsStar />
     </div>
   );
-}
+};
 
 const Post = () => {
   return (
@@ -33,16 +40,18 @@ const Post = () => {
       <div>
         <img src={avatar} alt="" className="w-16 h-14 rounded-full" />
       </div>
-      <div className='w-full'>
-        <p className="text-xl text-slate-400 mt-5 font-base">Whats Happeneing?</p>
-        <div className="pt-5 flex justify-between w-full pt-5 pb-5">
-          <div className="flex w-1/2 justify-between">
-            <AiOutlinePicture className='text-2xl text-blue-500' />
-            <AiOutlineFileGif className='text-2xl text-blue-500' />
-            <CiBoxList className='text-2xl text-blue-500' />
-            <BsEmojiSmile className='text-2xl text-blue-500' />
-            <TbCalendarTime className='text-2xl text-blue-500' />
-            <HiOutlineLocationMarker className='text-2xl text-blue-500' />
+      <div className="w-full">
+        <p className="text-xl text-gray-400 mt-5 font-base">
+          Whats Happeneing?
+        </p>
+        <div className="flex justify-between w-full pt-5 pb-5">
+          <div className="flex w-1/2 justify-between text-2xl text-blue-500 font-medium">
+            <AiOutlinePicture />
+            <AiOutlineFileGif />
+            <CiBoxList />
+            <BsEmojiSmile />
+            <TbCalendarTime />
+            <HiOutlineLocationMarker />
           </div>
           <button className="px-8 font-bold p-2 bg-blue-500 text-white rounded-full">
             Tweet
@@ -61,16 +70,31 @@ const Tweets = ({ user }) => {
           <div>
             <img src={p.image} alt="" className="w-14 rounded-full" />
           </div>
-          <div className="text-slate-700">
+          <div>
             <div className="flex">
-              <h1 className="font-bold">Saran Pariyar</h1>
-              <p className="text-slate-500 "> @Saran Pariyar.4h</p>
+              <h1 className="font-bold text-gray-800">{p.userName} </h1>
+              <p className="text-gray-400 ">
+                {p.userAccount} {p.time}
+              </p>
             </div>
-            <p>
+            <p className="text-gray-600 text-md font-medium">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
               voluptatibus.
             </p>
-            <div></div>
+            <div className="flex justify-between w-4/5 my-2 text-gray-600">
+              <div className="flex items-center text-2xl space-x-3">
+                <BiMessageRounded /> <p className="text-sm">{p.comments}</p>
+              </div>
+              <div className="flex items-center text-2xl space-x-3">
+                <AiOutlineRetweet /> <p className="text-sm">{p.retweets}</p>
+              </div>
+              <div className="flex items-center text-2xl space-x-3">
+                <AiOutlineHeart /> <p className="text-sm">{p.likes}</p>
+              </div>
+              <div className="flex items-center text-2xl space-x-3">
+                <MdSaveAlt />
+              </div>
+            </div>
           </div>
         </div>
       ))}
@@ -78,4 +102,4 @@ const Tweets = ({ user }) => {
   );
 };
 
-export default MainPage
+export default MainPage;
