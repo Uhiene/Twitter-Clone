@@ -1,7 +1,5 @@
 import { createGlobalState } from "react-hooks-global-state";
-import avatar1 from "../assets/avatar1.jpg";
-import avatar2 from "../assets/avatar2.jpg";
-import avatar3 from "../assets/avatar3.jpg";
+
 
 const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
   user: [
@@ -31,7 +29,8 @@ const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
     },
     {
       id: 3,
-      image: "https://twitter.com/PNgumoha/photo",
+      image:
+        "https://pbs.twimg.com/profile_images/1553402925929603072/qPN5j2_Y_400x400.jpg",
       userName: "Prince Eldn",
       userAccount: "@PNuomoha",
       post: "",
@@ -42,7 +41,8 @@ const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
     },
     {
       id: 4,
-      image: "https://twitter.com/dev_giftea/photo",
+      image:
+        "https://pbs.twimg.com/profile_images/1550845443235528706/nxhES5Cf_400x400.jpg",
       userName: "Giftea",
       userAccount: "@Dev_Giftea",
       post: "",
@@ -53,9 +53,10 @@ const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
     },
     {
       id: 5,
-      image: avatar2,
-      userName: "Samuel Adebayo",
-      userAccount: "@Samuel Adebayo",
+      image:
+        "https://pbs.twimg.com/profile_images/1591469678165200897/Amdxffw4_400x400.jpg",
+      userName: "The Cyber guy",
+      userAccount: "@Cyberguy_fct",
       post: "",
       time: ".1m",
       likes: 2,
