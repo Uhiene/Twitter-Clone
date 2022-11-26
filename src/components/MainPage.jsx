@@ -38,7 +38,7 @@ const Post = () => {
   return (
     <div className="border-b border-slate-200 flex space-x-4 p-4">
       <div>
-        <img src={avatar} alt="" className="w-16 h-14 rounded-full" />
+        <img src={avatar} alt="" className="w-16 rounded-full" />
       </div>
       <div className="w-full">
         <p className="text-xl text-gray-400 mt-5 font-base">
@@ -68,7 +68,7 @@ const Tweets = ({ user }) => {
       {user.map((p, i) => (
         <div className="flex space-x-4 border-b border-slate-200 p-4" key={i}>
           <div>
-            <img src={p.image} alt="" className="w-14 rounded-full" />
+            <img src={p.image} alt="" className="w-16 rounded-full" />
           </div>
           <div>
             <div className="flex">

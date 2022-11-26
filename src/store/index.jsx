@@ -1,5 +1,7 @@
 import { createGlobalState } from "react-hooks-global-state";
-
+import avatar1 from "../assets/avatar1.jpg"
+import avatar2 from "../assets/avatar2.jpg"
+import avatar3 from "../assets/avatar3.jpg"
 
 const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
   user: [
@@ -88,6 +90,26 @@ const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
       trendHeader: "Trending",
       trend: "#Burna",
       tweets: "29.7k",
+    },
+  ],
+  follow: [
+    {
+      id: 1,
+      image:avatar1,
+      userName: "Jane Doe",
+      userAccount: "@Jane Doe",
+    },
+    {
+      id: 2,
+      image:avatar2,
+      userName: "Joe Doe",
+      userAccount: "@Joe Doe",
+    },
+    {
+      id: 3,
+      image:avatar3,
+      userName: "Anonymous",
+      userAccount: "@Anonymous",
     },
   ],
 });

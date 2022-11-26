@@ -4,6 +4,7 @@ import { BiHomeCircle } from "react-icons/bi";
 import { BsPeople, BsBell, BsPerson, BsBookmark } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { CiCircleMore } from "react-icons/ci";
+import { MdMoreHoriz } from "react-icons/md";
 import avatar from "../assets/899.jpg";
 
 const SideBar = () => {
@@ -67,12 +68,15 @@ const Button = () => {
 };
 const Profile = () => {
   return (
-    <div className="px-20 flex space-x-2">
-      <img src={avatar}  className="w-12 rounded-full" />
-      <div>
-        <h2 className="font-bold text-md">Code_Queen</h2>
-        <p className="text-slate-400">@Chenemi_U</p>
+    <div className="flex jusstify-betwee">
+      <div className="px-20 flex space-x-2">
+        <img src={avatar} className="w-16 rounded-full" />
+        <div>
+          <h2 className="font-bold text-md">Code_Queen</h2>
+          <p className="text-slate-400">@Chenemi_U</p>
+        </div>
       </div>
+      <MdMoreHoriz className="text-gray-500 font-medium text-2xl" />
     </div>
   );
 };
