@@ -17,7 +17,7 @@ import { useGlobalState } from "../store";
 const MainPage = () => {
   const [user] = useGlobalState("user");
   return (
-    <div className="border-r border-slate-200 w-3/5">
+    <div className="border-r border-slate-200 w-5/6 md:w-3/5 ">
       <Header />
       <Post />
       <Tweets user={user} />
