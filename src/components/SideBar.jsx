@@ -65,7 +65,7 @@ const Button = () => {
       <div className="bg-blue-500 flex items-center justify-center text-3xl w-10 h-10 text-white rounded-full md:hidden" >
         <TbFeather />
       </div>
-      <button className="px-5 sm:px-10 mb-20 p-4 bg-blue-500 text-white rounded-full hidden md:flex">
+      <button className="px-5 sm:px-14 mb-20 p-2 bg-blue-500 text-white rounded-full hidden md:flex">
         Tweet
       </button>
       
