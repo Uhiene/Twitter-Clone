@@ -30,10 +30,10 @@ const Bar = () => {
         <FaHashtag className=" text-3xl" />
         <p className="hidden md:flex">Explore</p>
       </Link>
-      <div className="flex space-x-3 text-gray-800 font-medium">
+      <Link to={"/communities"} className="flex space-x-3 text-gray-800 font-medium">
         <BsPeople className=" text-3xl" />
         <p className="hidden md:flex">Communities</p>
-      </div>
+      </Link>
       <div className="flex space-x-3 text-gray-800 font-medium">
         <BsBell className=" text-3xl" />
         <p className="hidden md:flex">Notifications</p>

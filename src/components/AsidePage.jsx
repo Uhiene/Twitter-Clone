@@ -55,7 +55,7 @@ const WhatsHappening = () => {
   
 };
 
-const Trends = ({ trendProp }) => {
+export function Trends ({ trendProp }){
   return (
     <div className="flex justify-between my-5">
       <div>
