@@ -17,7 +17,7 @@ import { useGlobalState } from "../store";
 const MainPage = () => {
   const [user] = useGlobalState("user");
   return (
-    <div className="border-r border-slate-200 w-5/6 md:w-3/5 ">
+    <div className="border-x border-slate-200 w-5/6 md:w-3/5 ">
       <Header />
       <Post />
       <Tweets user={user} />
@@ -27,7 +27,7 @@ const MainPage = () => {
 
 const Header = () => {
   return (
-    <div className="flex justify-between font-bold text-gray-800 text-xl px-4">
+    <div className="flex justify-between font-bold text-gray-800 text-lg px-4">
       <p>Home</p>
       <BsStar />
     </div>
@@ -38,7 +38,7 @@ const Post = () => {
   return (
     <div className="border-b border-slate-200 flex space-x-4 p-4">
       <div>
-        <img src={avatar} alt="" className="w-16 rounded-full" />
+        <img src={avatar} alt="" class="w-12 object-contain rounded-full" />
       </div>
       <div className="w-full">
         <p className="text-xl text-gray-400 mt-5 font-base">
@@ -68,7 +68,11 @@ const Tweets = ({ user }) => {
       {user.map((p, i) => (
         <div className="flex space-x-4 border-b border-slate-200 p-4" key={i}>
           <div>
-            <img src={p.image} alt="" className="w-16 rounded-full" />
+            <img
+              src={p.image}
+              alt=""
+              className="w-12 object-contain rounded-full"
+            />
           </div>
           <div>
             <div className="flex">
@@ -83,13 +87,16 @@ const Tweets = ({ user }) => {
             </p>
             <div className="flex justify-between w-4/5 my-2 text-gray-600">
               <div className="flex items-center text-2xl space-x-3">
-                <BiMessageRounded /> <p className="text-sm">{p.comments}</p>
+                <BiMessageRounded />
+                <p className="text-sm">{p.comments}</p>
               </div>
               <div className="flex items-center text-2xl space-x-3">
-                <AiOutlineRetweet /> <p className="text-sm">{p.retweets}</p>
+                <AiOutlineRetweet />
+                <p className="text-sm">{p.retweets}</p>
               </div>
               <div className="flex items-center text-2xl space-x-3">
-                <AiOutlineHeart /> <p className="text-sm">{p.likes}</p>
+                <AiOutlineHeart />
+                <p className="text-sm">{p.likes}</p>
               </div>
               <div className="flex items-center text-2xl space-x-3">
                 <MdSaveAlt />

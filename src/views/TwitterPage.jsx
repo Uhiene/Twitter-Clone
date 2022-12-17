@@ -11,7 +11,7 @@ const TwitterPage = () => {
     <div>
       <div className="p-5 flex justify-between">
         <div>Twitter-Home/Twitter</div>
-        <div className="flex space-x-5">
+        <div className="flex space-x-5 text-sm text-gray-500">
           <MdMoreHoriz />
           <FaTimes />
           <BsFiles />

@@ -20,41 +20,41 @@ const SideBar = () => {
 
 const Bar = () => {
   return (
-    <div className="font-bold text-xl px-5 sm:px-10 border-r border-slate-200 h-5/6 space-y-6 mb-36">
-      <FaTwitter className="text-blue-500 text-3xl" />
-      <Link to={"/"} className="flex space-x-3 text-gray-800 font-medium">
-        <BiHomeCircle className="text-3xl" />
+    <div className="font-bold px-5 text-xl sm:px-10 space-y-6">
+      <FaTwitter className="text-blue-500 text-2xl" />
+      <Link to={"/"} className="flex items-center space-x-3 text-gray-800 font-medium">
+        <BiHomeCircle className="text-2xl" />
         <p className="hidden md:flex"> Home</p>
       </Link>
-      <Link to={"/explore"}  className="flex space-x-3 text-gray-800 font-medium">
-        <FaHashtag className=" text-3xl" />
+      <Link to={"/explore"}  className="flex items-center space-x-3 text-gray-800 font-medium">
+        <FaHashtag className=" text-2xl" />
         <p className="hidden md:flex">Explore</p>
       </Link>
-      <Link to={"/communities"} className="flex space-x-3 text-gray-800 font-medium">
-        <BsPeople className=" text-3xl" />
+      <Link to={"/communities"} className="flex items-center space-x-3 text-gray-800 font-medium">
+        <BsPeople className=" text-2xl" />
         <p className="hidden md:flex">Communities</p>
       </Link>
-      <div className="flex space-x-3 text-gray-800 font-medium">
-        <BsBell className=" text-3xl" />
+      <Link to={"/notifications"} className="flex items-center space-x-3 text-gray-800 font-medium">
+        <BsBell className=" text-2xl" />
         <p className="hidden md:flex">Notifications</p>
-      </div>
-      <div className="flex space-x-3 text-gray-800 font-medium">
-        <FiMail className=" text-3xl" />
+      </Link>
+      <Link to={"/messages"} className="flex items-center space-x-3 text-gray-800 font-medium">
+        <FiMail className=" text-2xl" />
         <p className="hidden md:flex">Messages</p>
-      </div>
-      <div className="flex space-x-3 text-gray-800 font-medium">
-        <BsBookmark className=" text-3xl" />
+      </Link>
+      <Link to={"/bookmarks"} className="flex items-center space-x-3 text-gray-800 font-medium">
+        <BsBookmark className=" text-2xl" />
         <p className="hidden md:flex">Bookmarks</p>
-      </div>
-      <div className="flex space-x-3 text-gray-800 font-medium">
-        <BsPerson className=" text-3xl" />
+      </Link>
+      <Link to={"/profile"} className="flex items-center space-x-3 text-gray-800 font-medium">
+        <BsPerson className=" text-2xl" />
         <p className="hidden md:flex">Profile</p>
-      </div>
-      <div className="flex space-x-3 text-gray-800 font-medium">
-        <CiCircleMore className=" text-3xl" />
+      </Link>
+      <Link to={"/more"} className="flex items-center space-x-3 text-gray-800 font-medium">
+        <CiCircleMore className=" text-2xl" />
         <p className="hidden md:flex">More</p>
-      </div>
-      <Button className=" text-3xl" />
+      </Link>
+      <Button className=" text-2xl" />
     </div>
   );
 };
@@ -74,12 +74,12 @@ const Button = () => {
 };
 const Profile = () => {
   return (
-    <div className="flex jusstify-betwee">
-      <div className="px-5 sm:px-10 flex space-x-2">
-        <img src={avatar} className="w-16 rounded-full" />
+    <div className="flex justify-between w-3/4 mx-5">
+      <div className="flex justify-end space-x-2">
+        <img src={avatar} className="w-12 object-contain rounded-full" />
         <div className="hidden md:block">
-          <h2 className="font-bold text-md">Code_Queen</h2>
-          <p className="text-slate-400">@Chenemi_U</p>
+          <h2 className="font-bold text-sm">Code_Queen</h2>
+          <p className="text-slate-400 text-sm">@Chenemi_U</p>
         </div>
       </div>
       <MdMoreHoriz className="text-gray-500 font-medium text-2xl hidden md:flex" />

@@ -1,7 +1,7 @@
 import { createGlobalState } from "react-hooks-global-state";
-import avatar1 from "../assets/avatar1.jpg"
-import avatar2 from "../assets/avatar2.jpg"
-import avatar3 from "../assets/avatar3.jpg"
+import avatar1 from "../assets/avatar1.jpg";
+import avatar2 from "../assets/avatar2.jpg";
+import avatar3 from "../assets/avatar3.jpg";
 
 const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
   user: [
@@ -95,23 +95,45 @@ const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
   follow: [
     {
       id: 1,
-      image:avatar1,
+      image: avatar1,
       userName: "Jane Doe",
       userAccount: "@Jane Doe",
     },
     {
       id: 2,
-      image:avatar2,
+      image: avatar2,
       userName: "Joe Doe",
       userAccount: "@Joe Doe",
     },
     {
       id: 3,
-      image:avatar3,
+      image: avatar3,
       userName: "Anonymous",
       userAccount: "@Anonymous",
     },
   ],
+  followed: [
+    {
+      id: 1,
+      userName: "Darlington Gospel",
+      image:
+      "https://pbs.twimg.com/profile_images/1529866054746398724/6_yk41Lt_400x400.jpg",
+    },
+    {
+      id: 2,
+      image:
+        "https://pbs.twimg.com/profile_images/1550845443235528706/nxhES5Cf_400x400.jpg",
+      userName: "Giftea",
+    },
+    {
+      id: 3,
+      image:
+        "https://pbs.twimg.com/profile_images/1591469678165200897/Amdxffw4_400x400.jpg",
+      userName: "The Cyber guy",
+    },
+  ],
+  Liked: [{ id: 1 }, { id: 2 }, { id: 3 }],
+  Replies: [{ id: 1 }, { id: 2 }, { id: 3 }],
 });
 
 export { setGlobalState, useGlobalState, getGlobalState };

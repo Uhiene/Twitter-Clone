@@ -8,12 +8,9 @@ const AsidePage = () => {
   const [follow] = useGlobalState("follow");
   return (
     <div className="w-2/4 px-10 space-y-4 hidden md:w-2/5 md:block">
-      <div className="bg-gray-100 p-4 rounded-full flex space-x-3 text-gray-500 font-medium">
-        <FaSearch />
-        <p> Search Twitter</p>
-      </div>
+      <SearchBar/>
       <div className="bg-gray-100 p-4 rounded-2xl">
-        <h1 className="text-2xl font-bold text-gray-800">Whats Happening</h1>
+        <h1 className="text-xl font-bold text-gray-800">Whats Happening</h1>
         <WhatsHappening />
         <div className="my-6">
           {trending.map((trend, i) => (
@@ -22,7 +19,7 @@ const AsidePage = () => {
         </div>
       </div>
       <div className="bg-gray-100 p-4 rounded-2xl">
-        <h1 className="text-2xl font-bold text-gray-800">Who to follow</h1>
+        <h1 className="text-xl font-bold text-gray-800">Who to follow</h1>
         <div className="">
           {follow.map((follow, i) => (
             <Follow key={i} followProp={follow} />
@@ -34,14 +31,23 @@ const AsidePage = () => {
   
 };
 
+export function SearchBar() {
+  return(
+    <div className="bg-gray-100 p-2 rounded-full flex items-center space-x-3 text-gray-500 font-medium">
+        <FaSearch />
+        <p> Search Twitter</p>
+      </div>
+  )
+}
+
 const WhatsHappening = () => {
   return (
     <div className="flex justify-between my-5">
       <div>
-        <p className="capitalize text-gray-500 font-medium text-md">
+        <p className="capitalize text-gray-500 font-medium text-sm">
           fifa world cup starts on November
         </p>
-        <h4 className="text-lg font-semibold text-gray-800">England vs USA</h4>
+        <h4 className="text-md font-semibold text-gray-800">England vs USA</h4>
       </div>
       <div>
         <img
@@ -59,13 +65,13 @@ export function Trends ({ trendProp }){
   return (
     <div className="flex justify-between my-5">
       <div>
-        <p className="text-gray-500 font-medium text-md">
+        <p className="text-gray-500 font-medium text-sm">
           {trendProp.trendHeader}
         </p>
-        <h4 className="text-lg font-semibold text-gray-800">
+        <h4 className="text-md font-semibold text-gray-800">
           {trendProp.trend}
         </h4>
-        <p className="text-gray-500 font-medium text-md">
+        <p className="text-gray-500 font-medium text-sm">
           {trendProp.tweets} tweets
         </p>
       </div>
@@ -77,19 +83,19 @@ export function Trends ({ trendProp }){
 const Follow = ({ followProp }) => {
   return (
     <div className="flex justify-between items-center my-6 w-full">
-      <div className="flex space-x-6">
-        <img src={followProp.image} alt="" className="w-16 rounded-full" />
+      <div className="flex space-x-4">
+        <img src={followProp.image} alt="" className="w-12 h-12 object-contain rounded-full" />
         <div>
-          <h4 className="text-lg font-bold text-gray-900">
+          <h4 className="text-md font-bold text-gray-900">
             {followProp.userName}
           </h4>
-          <p className="text-gray-500 font-semibold text-md">
+          <p className="text-gray-500 font-semibold text-sm">
             {followProp.userAccount}
           </p>
         </div>
       </div>
       <div>
-        <button className="px-6 font-bold p-2 bg-black text-white rounded-full">
+        <button className="px-6 font-bold p-1 bg-black text-white rounded-full">
           Follow
         </button>
       </div>
