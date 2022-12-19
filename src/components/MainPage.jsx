@@ -1,4 +1,3 @@
-import React from "react";
 import avatar from "../assets/899.jpg";
 import { BsEmojiSmile, BsStar } from "react-icons/bs";
 import {
@@ -85,23 +84,7 @@ const Tweets = ({ user }) => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
               voluptatibus.
             </p>
-            <div className="flex justify-between w-4/5 my-2 text-gray-600">
-              <div className="flex items-center text-2xl space-x-3">
-                <BiMessageRounded />
-                <p className="text-sm">{p.comments}</p>
-              </div>
-              <div className="flex items-center text-2xl space-x-3">
-                <AiOutlineRetweet />
-                <p className="text-sm">{p.retweets}</p>
-              </div>
-              <div className="flex items-center text-2xl space-x-3">
-                <AiOutlineHeart />
-                <p className="text-sm">{p.likes}</p>
-              </div>
-              <div className="flex items-center text-2xl space-x-3">
-                <MdSaveAlt />
-              </div>
-            </div>
+            <Reactions p={p} />
           </div>
         </div>
       ))}
@@ -109,4 +92,25 @@ const Tweets = ({ user }) => {
   );
 };
 
+const Reactions = ({ p }) => (
+  <div className="flex justify-between w-4/5 my-2 text-gray-600">
+    <div className="flex items-center text-2xl space-x-3">
+      <BiMessageRounded />
+      <p className="text-sm">{p.comments}</p>
+    </div>
+    <div className="flex items-center text-2xl space-x-3">
+      <AiOutlineRetweet />
+      <p className="text-sm">{p.retweets}</p>
+    </div>
+    <div className="flex items-center text-2xl space-x-3">
+      <AiOutlineHeart />
+      <p className="text-sm">{p.likes}</p>
+    </div>
+    <div className="flex items-center text-2xl space-x-3">
+      <MdSaveAlt />
+    </div>
+  </div>
+);
+
 export default MainPage;
+export {Reactions}

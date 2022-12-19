@@ -112,24 +112,30 @@ const { setGlobalState, useGlobalState, getGlobalState } = createGlobalState({
       userAccount: "@Anonymous",
     },
   ],
-  followed: [
+  notification: [
     {
       id: 1,
+      type:"postNotifications",
       userName: "Darlington Gospel",
       image:
       "https://pbs.twimg.com/profile_images/1529866054746398724/6_yk41Lt_400x400.jpg",
+      description:"Hi folks, I’m afraid it’s time for me to say goodbye. Not just leaving Twitter, but the whole show. I’ve been battling cancer last 2 years, but now only have a few days left now. Thank you wonderful people, I leave this crazy world with much love in my heart ❤️"
     },
     {
       id: 2,
+      type:"followedNotifications",
       image:
         "https://pbs.twimg.com/profile_images/1550845443235528706/nxhES5Cf_400x400.jpg",
       userName: "Giftea",
     },
     {
       id: 3,
+      type:"repliedNotifications",
+      userName: "Saran Pariyar",
+      userAccount: "@Saran Pariyar",
+      comment: "love in my heart. Thank you ",
       image:
         "https://pbs.twimg.com/profile_images/1591469678165200897/Amdxffw4_400x400.jpg",
-      userName: "The Cyber guy",
     },
   ],
   Liked: [{ id: 1 }, { id: 2 }, { id: 3 }],
