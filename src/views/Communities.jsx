@@ -10,7 +10,7 @@ const Communities = () => {
   return (
     <div className="flex p-5">
       <SideBar />
-      <div className="p-5 w-5/6 md:w-2/5 border-x border-slate-200">
+      <div className="px-5 w-5/6 md:w-3/5 border-x border-slate-200">
         <header className="flex justify-between items-center">
           <div className="flex items-center space-x-4 font-bold text-lg">
             <AiOutlineArrowLeft />

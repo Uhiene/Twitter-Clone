@@ -19,7 +19,7 @@ const TwitterPage = () => {
         </div>
       </div>
 
-      <div className="flex justify-between">
+      <div className="flex justify-between p-5">
         <SideBar />
         <MainPage className="border-2 border-black" />
         <AsidePage className="border-2 border-black" />

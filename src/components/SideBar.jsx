@@ -68,7 +68,6 @@ const Button = () => {
       <button className="px-5 sm:px-14 mb-20 p-2 bg-blue-500 text-white rounded-full hidden md:flex">
         Tweet
       </button>
-      
     </div>
   );
 };

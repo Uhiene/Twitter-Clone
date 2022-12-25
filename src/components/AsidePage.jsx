@@ -7,8 +7,8 @@ const AsidePage = () => {
   const [trending] = useGlobalState("trending");
   const [follow] = useGlobalState("follow");
   return (
-    <div className="w-2/4 px-10 space-y-4 hidden md:w-2/5 md:block">
-      <SearchBar/>
+    <div className="w-2/5 px-10 space-y-4 hidden md:block">
+      <SearchBar />
       <div className="bg-gray-100 p-4 rounded-2xl">
         <h1 className="text-xl font-bold text-gray-800">Whats Happening</h1>
         <WhatsHappening />
@@ -28,16 +28,15 @@ const AsidePage = () => {
       </div>
     </div>
   );
-  
 };
 
 export function SearchBar() {
-  return(
+  return (
     <div className="bg-gray-100 p-2 rounded-full flex items-center space-x-3 text-gray-500 font-medium">
-        <FaSearch />
-        <p> Search Twitter</p>
-      </div>
-  )
+      <FaSearch />
+      <p> Search Twitter</p>
+    </div>
+  );
 }
 
 const WhatsHappening = () => {
@@ -51,17 +50,16 @@ const WhatsHappening = () => {
       </div>
       <div>
         <img
-        src="https://pbs.twimg.com/semantic_core_img/1595461138900307970/Oyg9PoAd?format=jpg&name=240x240"
-        alt=""
-        className="w-24 rounded-lg"
-      />
-      </div>    
+          src="https://pbs.twimg.com/semantic_core_img/1595461138900307970/Oyg9PoAd?format=jpg&name=240x240"
+          alt=""
+          className="w-24 rounded-lg"
+        />
+      </div>
     </div>
   );
-  
 };
 
-export function Trends ({ trendProp }){
+export function Trends({ trendProp }) {
   return (
     <div className="flex justify-between my-5">
       <div>
@@ -78,13 +76,17 @@ export function Trends ({ trendProp }){
       <MdMoreHoriz className="text-gray-500 font-medium text-xl" />
     </div>
   );
-};
+}
 
 const Follow = ({ followProp }) => {
   return (
     <div className="flex justify-between items-center my-6 w-full">
       <div className="flex space-x-4">
-        <img src={followProp.image} alt="" className="w-12 h-12 object-contain rounded-full" />
+        <img
+          src={followProp.image}
+          alt=""
+          className="w-12 h-12 object-contain rounded-full"
+        />
         <div>
           <h4 className="text-md font-bold text-gray-900">
             {followProp.userName}
@@ -103,5 +105,4 @@ const Follow = ({ followProp }) => {
   );
 };
 
-
-export default AsidePage
+export default AsidePage;
