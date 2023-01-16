@@ -3,8 +3,10 @@ import { BiMessageAltDetail } from "react-icons/bi";
 import { FaSearch } from "react-icons/fa";
 import { FiSettings } from "react-icons/fi";
 import SideBar from "../components/SideBar";
+import { useGlobalState } from "../store";
 
 const Messages = () => {
+  const [user] = useGlobalState("user");
   return (
     <div className="flex p-5">
       <SideBar />
@@ -21,6 +23,34 @@ const Messages = () => {
         <div className="p-2 rounded-full flex items-center justify-center space-x-3 text-gray-500 font-medium border border-gray-500 mt-4">
           <FaSearch />
           <p>Search Direct Messages </p>
+        </div>
+        <div className="">
+          {user.map((p, i) => (
+            <div
+              className="flex space-x-4 border-b border-slate-200 p-4"
+              key={i}
+            >
+              <div>
+                <img
+                  src={p.image}
+                  alt=""
+                  className="w-12 object-contain rounded-full"
+                />
+              </div>
+              <div>
+                <div className="flex">
+                  <h1 className="font-bold text-gray-800">{p.userName} </h1>
+                  <p className="text-gray-500 ">
+                    {p.userAccount} {p.time}
+                  </p>
+                  <
+                </div>
+                <p className="text-gray-600 text-md font-medium">
+                  
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <div className="p-6 w-2/5 hidden md:block">
